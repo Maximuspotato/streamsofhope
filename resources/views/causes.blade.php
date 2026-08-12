@@ -8,7 +8,7 @@
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-7">
-              <h2 class="heading mb-5">Our Blog</h2>
+              <h2 class="heading mb-5">Our Causes</h2>
             </div>
           </div>
         </div>
@@ -31,7 +31,7 @@
             <h3><a href="#">Be A Volunteer Today</a></h3>
             <span class="date mb-4 d-block text-muted">July 26, 2018</span>
             <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
-            <p><a href="{{ url('/blog-item') }}" class="link-underline">Read More</a></p>
+            <p><a href="{{ url('/causes-item') }}" class="link-underline">Read More</a></p>
           </div>
         </div>
         <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0">

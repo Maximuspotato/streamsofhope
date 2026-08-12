@@ -38,12 +38,11 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item"><a href="{{ url('/') }}" class="nav-link">Home</a></li>
           <li class="nav-item"><a href="{{ url('/about') }}" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="{{ url('/how-it-works') }}" class="nav-link">How It Works</a></li>
           <li class="nav-item"><a href="{{ url('/causes') }}" class="nav-link">Causes</a></li>
           <li class="nav-item"><a href="{{ url('/gallery') }}" class="nav-link">Gallery</a></li>
           <li class="nav-item"><a href="{{ url('/blog') }}" class="nav-link">Blog</a></li>
           <li class="nav-item"><a href="{{ url('/contact') }}" class="nav-link">Contact</a></li>
-          <li class="nav-item"><a href="donate.html" class="btn btn-primary nav-link" role="button">Donate</a></li>
+          <li class="nav-item"><a href="{{ url('/donate') }}" class="btn btn-primary nav-link" role="button">Donate</a></li>
         </ul>
       </div>
     </div>
@@ -62,7 +61,7 @@
           <p><a href="#" class="link-underline">Read  More</a></p>
         </div>
         <div class="col-md-6 col-lg-4">
-          <h3 class="heading-section">Recent Blog</h3>
+          <h3 class="heading-section">Recent Causes</h3>
           <div class="block-21 d-flex mb-4">
             <figure class="mr-3">
               <img src="images/img_1.jpg" alt="" class="img-fluid">
@@ -121,10 +120,8 @@
       <div class="row pt-5">
         <div class="col-md-12 text-center">
           <p>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ion-ios-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            </p>
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made with <i class="ion-ios-heart text-danger" aria-hidden="true"></i> by <a href="https://thewetchicken.com" target="_blank" >TWC</a>
+          </p>
         </div>
       </div>
     </div>

@@ -27,14 +27,14 @@
               <span class="block-48-text-1">Served Over</span>
               <div class="block-48-counter ftco-number" data-number="1000">0</div>
               <span class="block-48-text-1 mb-4 d-block">Children in 10 different counties</span>
-              <p class="mb-0"><a href="#" class="btn btn-white px-3 py-2">View Our Program</a></p>
+              <p class="mb-0"><a href="{{ url('/about') }}" class="btn btn-white px-3 py-2">View Our Program</a></p>
             </div>
         </div>
         <div class="col-md-6 welcome-text">
           <h2 class="display-4 mb-3">Who Are We?</h2>
           <p class="lead">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
           <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. </p>
-          <p class="mb-0"><a href="#" class="btn btn-primary px-3 py-2">Learn More</a></p>
+          <p class="mb-0"><a href="{{ url('/about') }}" class="btn btn-primary px-3 py-2">Learn More</a></p>
         </div>
       </div>
     </div>
@@ -48,9 +48,9 @@
           <div class="media block-6">
             <div class="icon"><span class="ion-ios-bulb"></span></div>
             <div class="media-body">
-              <h3 class="heading">Our Mission</h3>
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              <p><a href="#" class="link-underline">Learn More</a></p>
+              <h3 class="heading">Our Impact</h3>
+              <p>Creating ripples of hope, restoring dignity, and transforming whole communities one life at a time.</p>
+              <p><a href="{{ url('/causes') }}" class="link-underline">Learn More</a></p>
             </div>
           </div>     
         </div>
@@ -61,7 +61,7 @@
             <div class="media-body">
               <h3 class="heading">Make Donations</h3>
               <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              <p><a href="#" class="link-underline">Learn More</a></p>
+              <p><a href="{{ url('/donate') }}" class="link-underline">Learn More</a></p>
             </div>
           </div>  
         </div>
@@ -72,7 +72,7 @@
             <div class="media-body">
               <h3 class="heading">We Need Volunteers</h3>
               <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              <p><a href="#" class="link-underline">Learn More</a></p>
+              <p><a href="{{ url('/about') }}" class="link-underline">Learn More</a></p>
             </div>
           </div> 
         </div>
@@ -89,9 +89,9 @@
     <div class="container">
       <div class="row mb-3 justify-content-center">
         <div class="col-md-8 text-center">
-          <h2>Latest Fundraisers</h2>
+          <h2>Latest Causes</h2>
           <p class="lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <p><a href="#" class="link-underline">View All Fundraisers</a></p>
+          <p><a href="{{ url('/causes') }}" class="link-underline">View All Causes</a></p>
         </div>
       </div>
     </div>
@@ -156,96 +156,10 @@
                 <span class="fund-raised d-block">$12,000 raised of $30,000</span>
               </div>
             </div>
-
-            
-            <div class="card fundraise-item">
-              <a href="#"><img class="card-img-top" src="{{ asset('images/img_6.jpg') }}" alt="Image placeholder"></a>
-              <div class="card-body">
-                <h3 class="card-title"><a href="#">Voluteer </a></h3>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <span class="donation-time mb-3 d-block">Last donation 1w ago</span>
-                <div class="progress custom-progress-success">
-                  <div class="progress-bar bg-primary" role="progressbar" style="width: 28%" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <span class="fund-raised d-block">$12,000 raised of $30,000</span>
-              </div>
-            </div>
-            
-            <div class="card fundraise-item">
-              <a href="#"><img class="card-img-top" src="{{ asset('images/img_3.jpg') }}" alt="Image placeholder"></a>
-              <div class="card-body">
-                <h3 class="card-title"><a href="#">Children Needs Food</a></h3>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <span class="donation-time mb-3 d-block">Last donation 1w ago</span>
-                <div class="progress custom-progress-success">
-                  <div class="progress-bar bg-primary" role="progressbar" style="width: 28%" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <span class="fund-raised d-block">$12,000 raised of $30,000</span>
-              </div>
-            </div>
            
           </div>
         </div>
       <!-- </div> -->
-    </div>
-  </div> <!-- .section -->
-
-
-  <div class="site-section fund-raisers">
-    <div class="container">
-      <div class="row mb-3 justify-content-center">
-        <div class="col-md-8 text-center">
-          <h2>Latest Donations</h2>
-          <p class="lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <p class="mb-5"><a href="#" class="link-underline">View All Donations</a></p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6 col-lg-3 mb-5">
-          <div class="person-donate text-center">
-            <img src="{{ asset('images/person_1.jpg') }}" alt="Image placeholder" class="img-fluid">
-            <div class="donate-info">
-              <h2>Jorge Smith</h2>
-              <span class="time d-block mb-3">Donated Just now</span>
-              <p>Donated <span class="text-success">$252</span> <br> <em>for</em> <a href="#" class="link-underline fundraise-item">Water Is Life. Clean Water In Urban Area</a></p>
-            </div>
-          </div>    
-        </div>
-
-        <div class="col-md-6 col-lg-3 mb-5">
-          <div class="person-donate text-center">
-            <img src="{{ asset('images/person_2.jpg') }}" alt="Image placeholder" class="img-fluid">
-            <div class="donate-info">
-              <h2>Christine Charles</h2>
-              <span class="time d-block mb-3">Donated 1 hour ago</span>
-              <p>Donated <span class="text-success">$400</span> <br> <em>for</em> <a href="#" class="link-underline fundraise-item">Children Needs Education</a></p>
-            </div>
-          </div>    
-        </div>
-
-        <div class="col-md-6 col-lg-3 mb-5">
-          <div class="person-donate text-center">
-            <img src="{{ asset('images/person_3.jpg') }}" alt="Image placeholder" class="img-fluid">
-            <div class="donate-info">
-              <h2>Albert Sluyter</h2>
-              <span class="time d-block mb-3">Donated 4 hours ago</span>
-              <p>Donated <span class="text-success">$1,200</span> <br> <em>for</em> <a href="#" class="link-underline fundraise-item">Need Shelter for Children in Africa</a></p>
-            </div>
-          </div>    
-        </div>
-
-        <div class="col-md-6 col-lg-3 mb-5">
-          <div class="person-donate text-center">
-            <img src="{{ asset('images/person_4.jpg') }}" alt="Image placeholder" class="img-fluid">
-            <div class="donate-info">
-              <h2>Andrew Holloway</h2>
-              <span class="time d-block mb-3">Donated 9 hours ago</span>
-              <p>Donated <span class="text-success">$100</span> <br> <em>for</em> <a href="#" class="link-underline fundraise-item">Water Is Life. Clean Water In Urban Area</a></p>
-            </div>
-          </div>    
-        </div>
-      </div>
     </div>
   </div> <!-- .section -->
 
@@ -276,7 +190,7 @@
     <div class="container">
       <div class="row mb-5">
         <div class="col-md-12">
-          <h2>Latest News</h2>
+          <h2>Latest Blogs</h2>
         </div>
       </div>
 
