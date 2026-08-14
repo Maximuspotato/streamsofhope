@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CausesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,10 +35,6 @@ Route::get('/gallery', function () {
     return view('gallery'); 
 });
 
-Route::get('/blog', function () {
-    return view('blog'); 
-});
-
 Route::get('/blog-item', function () {
     return view('blog-item'); 
 });
@@ -48,3 +46,15 @@ Route::get('/contact', function () {
 Route::get('/donate', function () {
     return view('donate'); 
 });
+
+// Route for the main blog page
+Route::get('/blog', [BlogController::class, 'index']);
+
+// Route for the single blog page (the {slug} is dynamic)
+Route::get('/blog/{slug}', [BlogController::class, 'show']);
+
+// Route for the main causes page
+Route::get('/causes', [CausesController::class, 'index']);
+
+// Route for the single causes page (the {slug} is dynamic)
+Route::get('/causes/{slug}', [CausesController::class, 'show']);
