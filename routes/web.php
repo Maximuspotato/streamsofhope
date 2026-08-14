@@ -2,7 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
-use App\Http\Controllers\CausesController;
+use App\Http\Controllers\CauseController;
+
+use App\Http\Controllers\Admin\BlogController as AdminBlogController;
+use App\Http\Controllers\Admin\CauseController as AdminCauseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,7 +57,20 @@ Route::get('/blog', [BlogController::class, 'index']);
 Route::get('/blog/{slug}', [BlogController::class, 'show']);
 
 // Route for the main causes page
-Route::get('/causes', [CausesController::class, 'index']);
+Route::get('/causes', [CauseController::class, 'index']);
 
 // Route for the single causes page (the {slug} is dynamic)
-Route::get('/causes/{slug}', [CausesController::class, 'show']);
+Route::get('/causes/{slug}', [CauseController::class, 'show']);
+
+// Group all admin routes together
+Route::prefix('admin')->name('admin.')->group(function () {
+    
+    // Generates URLs like /admin/blogs
+    // Names routes like admin.blogs.index
+    Route::resource('blogs', AdminBlogController::class);
+    
+    // Generates URLs like /admin/causes
+    // Names routes like admin.causes.index
+    Route::resource('causes', AdminCauseController::class);
+    
+});
