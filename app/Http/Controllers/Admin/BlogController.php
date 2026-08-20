@@ -39,12 +39,13 @@ class BlogController extends Controller
     {
         $request->validate([
             'title' => 'required|max:255',
+            'excerpt' => 'nullable|string|required',
             'body' => 'required'
         ]);
 
         Blog::create($request->all());
 
-        return redirect()->route('blogs.index')->with('success', 'Blog created successfully!');
+        return redirect()->route('admin.blogs.index')->with('success', 'Blog created successfully!');
     }
 
     /**
@@ -85,7 +86,7 @@ class BlogController extends Controller
 
         $blog->update($request->all());
 
-        return redirect()->route('blogs.index')->with('success', 'Blog updated successfully!');
+        return redirect()->route('admin.blogs.index')->with('success', 'Blog updated successfully!');
     }
 
     /**
@@ -97,6 +98,6 @@ class BlogController extends Controller
     public function destroy(Blog $blog)
     {
         $blog->delete();
-        return redirect()->route('blogs.index')->with('success', 'Blog deleted successfully!');
+        return redirect()->route('admin.blogs.index')->with('success', 'Blog deleted successfully!');
     }
 }
