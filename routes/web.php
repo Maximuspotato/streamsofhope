@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CauseController;
+use App\Http\Controllers\HomeController;
 
 use App\Http\Controllers\Admin\BlogController as AdminBlogController;
 use App\Http\Controllers\Admin\CauseController as AdminCauseController;
@@ -18,9 +19,7 @@ use App\Http\Controllers\Admin\CauseController as AdminCauseController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/about', function () {
     return view('about'); 

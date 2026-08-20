@@ -4,12 +4,12 @@
 
   <div class="block-31" style="position: relative;">
     <div class="owl-carousel loop-block-31 ">
-      <div class="block-30 block-30-sm item" style="background-image: url('{{ asset('images/header.jpg') }}');" data-stellar-background-ratio="0.5">
+      <div class="block-30 block-30-sm item" style="background-image: url('{{ asset('images/index.jpeg') }}');" data-stellar-background-ratio="0.5">
         <div class="container">
           <div class="row align-items-center justify-content-center">
             <div class="col-md-7 text-center">
-              <h2 class="heading">Welcome to Streams of Hope</h2>
-              <h3 class="lead">Flowing Hope, Transforming Lives</h3>
+              <h3 class="lead">Welcome to Streams of Hope</h3>
+              <h2 class="heading">Empowering Vulnerable Communities to Build a Better Tomorrow</h2>
               <p style="display: inline-block;"><a href="https://vimeo.com/groups/9196/videos/815355489"  data-fancybox class="ftco-play-video d-flex"><span class="play-icon-wrap align-self-center mr-4"><span class="ion-ios-play"></span></span> <span class="align-self-center">Watch Video</span></a></p>
             </div>
           </div>
@@ -22,62 +22,62 @@
   <div class="site-section section-counter">
     <div class="container">
       <div class="row">
-        <div class="col-md-6 pr-5">
-          <div class="block-48">
-              <span class="block-48-text-1">Served Over</span>
-              <div class="block-48-counter ftco-number" data-number="1000">0</div>
-              <span class="block-48-text-1 mb-4 d-block">Children in 10 different counties</span>
-              <p class="mb-0"><a href="{{ url('/about') }}" class="btn btn-white px-3 py-2">View Our Program</a></p>
-            </div>
-        </div>
-        <div class="col-md-6 welcome-text">
-          <h2 class="display-4 mb-3">Who Are We?</h2>
-          <p class="lead">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-          <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. </p>
-          <p class="mb-0"><a href="{{ url('/about') }}" class="btn btn-primary px-3 py-2">Learn More</a></p>
+          <div class="col-md-6 pr-5">
+            <div class="block-48">
+                <span class="block-48-text-1">Empowered Over</span>
+                <div class="block-48-counter ftco-number" data-number="1000">0</div>
+                <span class="block-48-text-1 mb-4 d-block">Young lives across 10 Kenyan counties</span>
+                <p class="mb-0"><a href="{{ url('/causes') }}" class="btn btn-white px-3 py-2">See Our Impact</a></p>
+              </div>
+          </div>
+          <div class="col-md-6 welcome-text">
+            <h2 class="display-4 mb-3">Who Are We?</h2>
+            <p class="lead">Streams of Hope is a community-driven organization based in Nairobi, Kenya, dedicated to restoring dignity and creating lasting change for vulnerable families.</p>
+            <p class="mb-4">We believe that true transformation happens from the ground up. By providing access to quality education, women's empowerment programs, and holistic health initiatives, we equip individuals with the tools they need to break the cycle of poverty and build resilient futures.</p>
+            <p class="mb-0"><a href="{{ url('/about') }}" class="btn btn-primary px-3 py-2">Learn More</a></p>
+          </div>
         </div>
       </div>
     </div>
+
+    <div class="site-section border-top">
+      <div class="container">
+        <div class="row">
+
+    <div class="col-md-4">
+      <div class="media block-6">
+        <div class="icon"><span class="ion-ios-bulb"></span></div>
+        <div class="media-body">
+          <h3 class="heading">Partner With Us</h3>
+          <p>We collaborate with local businesses, schools, and corporate organizations to design innovative solutions and amplify our grassroots impact.</p>
+          <p><a href="{{ url('/contact') }}" class="link-underline">Let's Collaborate</a></p>
+        </div>
+      </div>     
+    </div>
+
+    <div class="col-md-4">
+      <div class="media block-6">
+        <div class="icon"><span class="ion-ios-cash"></span></div>
+        <div class="media-body">
+          <h3 class="heading">Make a Donation</h3>
+          <p>Your financial support directly funds vital education, health initiatives, and empowerment programs that break the cycle of poverty.</p>
+          <p><a href="{{ url('/donate') }}" class="link-underline">Donate Now</a></p>
+        </div>
+      </div>  
+    </div>
+
+    <div class="col-md-4">
+      <div class="media block-6">
+        <div class="icon"><span class="ion-ios-contacts"></span></div>
+        <div class="media-body">
+          <h3 class="heading">Become a Volunteer</h3>
+          <p>Lend your time and skills to our grassroots projects. Join a passionate team dedicated to making a tangible difference on the ground.</p>
+          <p><a href="{{ url('/about') }}" class="link-underline">Get Involved</a></p>
+        </div>
+      </div> 
+    </div>
+
   </div>
-
-  <div class="site-section border-top">
-    <div class="container">
-      <div class="row">
-
-        <div class="col-md-4">
-          <div class="media block-6">
-            <div class="icon"><span class="ion-ios-bulb"></span></div>
-            <div class="media-body">
-              <h3 class="heading">Our Impact</h3>
-              <p>Creating ripples of hope, restoring dignity, and transforming whole communities one life at a time.</p>
-              <p><a href="{{ url('/causes') }}" class="link-underline">Learn More</a></p>
-            </div>
-          </div>     
-        </div>
-
-        <div class="col-md-4">
-          <div class="media block-6">
-            <div class="icon"><span class="ion-ios-cash"></span></div>
-            <div class="media-body">
-              <h3 class="heading">Make Donations</h3>
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              <p><a href="{{ url('/donate') }}" class="link-underline">Learn More</a></p>
-            </div>
-          </div>  
-        </div>
-
-        <div class="col-md-4">
-          <div class="media block-6">
-            <div class="icon"><span class="ion-ios-contacts"></span></div>
-            <div class="media-body">
-              <h3 class="heading">We Need Volunteers</h3>
-              <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              <p><a href="{{ url('/about') }}" class="link-underline">Learn More</a></p>
-            </div>
-          </div> 
-        </div>
-
-      </div>
     </div>
   </div> <!-- .site-section -->
 
@@ -90,7 +90,7 @@
       <div class="row mb-3 justify-content-center">
         <div class="col-md-8 text-center">
           <h2>Latest Causes</h2>
-          <p class="lead">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="lead">Explore our active grassroots initiatives and see where your support is needed most right now. Discover how we are bringing education, health, and sustainable opportunities to communities in need.</p>
           <p><a href="{{ url('/causes') }}" class="link-underline">View All Causes</a></p>
         </div>
       </div>
@@ -102,83 +102,44 @@
         
         <div class="col-md-12 block-11">
           <div class="nonloop-block-11 owl-carousel">
-
+            @foreach($causes as $cause)
             <div class="card fundraise-item">
-              <a href="#"><img class="card-img-top" src="{{ asset('images/img_1.jpg') }}" alt="Image placeholder"></a>
+              <a href="/causes/{{ $cause->slug }}">
+                @if($cause->image_path)
+                  <img class="card-img-top" src="{{ asset('storage/' . $cause->image_path) }}" alt="{{ $cause->title }}">
+                @else
+                  <img class="card-img-top" src="{{ asset('images/default-blog.jfif') }}" alt="Default" >
+                @endif
+              </a>
               <div class="card-body">
-                <h3 class="card-title"><a href="#">Water Is Life. Clean Water In Urban Area</a></h3>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <span class="donation-time mb-3 d-block">Last donation 1w ago</span>
-                <div class="progress custom-progress-success">
-                  <div class="progress-bar bg-primary" role="progressbar" style="width: 28%" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <span class="fund-raised d-block">$12,000 raised of $30,000</span>
+                <h3 class="card-title"><a href="/causes/{{ $cause->slug }}">{{ $cause->title }}</a></h3>
+                <p class="card-text">{{ Str::words(strip_tags($cause->body), 15, '...') }}</p>
+                <span class="donation-time mb-3 d-block">{{ $cause->created_at->format('M d, Y') }}</span>
               </div>
             </div>
-
-            
-            <div class="card fundraise-item">
-              <a href="#"><img class="card-img-top" src="{{ asset('images/img_7.jpg') }}" alt="Image placeholder"></a>
-              <div class="card-body">
-                <h3 class="card-title"><a href="#">Need Shelter for Children in Africa</a></h3>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <span class="donation-time mb-3 d-block">Last donation 1w ago</span>
-                <div class="progress custom-progress-success">
-                  <div class="progress-bar bg-primary" role="progressbar" style="width: 28%" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <span class="fund-raised d-block">$12,000 raised of $30,000</span>
-              </div>
-            </div>
-            
-            <div class="card fundraise-item">
-              <a href="#"><img class="card-img-top" src="{{ asset('images/img_3.jpg') }}" alt="Image placeholder"></a>
-              <div class="card-body">
-                <h3 class="card-title"><a href="#">Children Needs Education</a></h3>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <span class="donation-time mb-3 d-block">Last donation 1w ago</span>
-                <div class="progress custom-progress-success">
-                  <div class="progress-bar bg-primary" role="progressbar" style="width: 28%" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <span class="fund-raised d-block">$12,000 raised of $30,000</span>
-              </div>
-            </div>
-
-
-            <div class="card fundraise-item">
-              <a href="#"><img class="card-img-top" src="{{ asset('images/img_4.jpg') }}" alt="Image placeholder"></a>
-              <div class="card-body">
-                <h3 class="card-title"><a href="#">Refugees Needs Food</a></h3>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <span class="donation-time mb-3 d-block">Last donation 1w ago</span>
-                <div class="progress custom-progress-success">
-                  <div class="progress-bar bg-primary" role="progressbar" style="width: 28%" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <span class="fund-raised d-block">$12,000 raised of $30,000</span>
-              </div>
-            </div>
-           
+            @endforeach          
           </div>
         </div>
       <!-- </div> -->
     </div>
   </div> <!-- .section -->
 
-  <div class="featured-section overlay-color-2" style="background-image: url('images/bg_3.jpg');">
+  <div class="featured-section overlay-color-2" style="background-image: url('{{ asset('images/success.jpeg') }}');">
     
     <div class="container">
       <div class="row">
 
         <div class="col-md-6">
-          <img src="{{ asset('images/bg_3.jpg') }}" alt="Image placeholder" class="img-fluid">
+          <img src="{{ asset('images/success.jpeg') }}" alt="Image placeholder" class="img-fluid" width="70%" height="70%">
         </div>
 
         <div class="col-md-6 pl-md-5">
-          <span class="featured-text d-block mb-3">Success Stories</span>
-          <h2>Water Is Life. We Successfuly Provide Clean Water in South East Asia</h2>
-          <p class="mb-3">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-          <span class="fund-raised d-block mb-5">We have raised $100,000</span>
+          <span class="featured-text d-block mb-3">Featured Success Story</span>
+          <h2>Keeping Girls in School: The Menstrual Health Initiative</h2>
+          <p class="mb-3">Lack of access to sanitary products forces many young girls to miss vital days of education every month. Through our recent community drive, we distributed reusable dignity kits and provided health mentorship to over 200 girls in Nairobi, ensuring they can pursue their studies with confidence and pride.</p>
+          <span class="fund-raised d-block mb-5">Fully Funded: $1,500 Raised for Dignity Kits</span>
 
-          <p><a href="#" class="btn btn-success btn-hover-white py-3 px-5">Read The Full Story</a></p>
+          <p><a href="{{ url('/causes') }}" class="btn btn-success btn-hover-white py-3 px-5">Read The Full Story</a></p>
         </div>
         
       </div>
@@ -189,79 +150,67 @@
   <div class="site-section bg-light">
     <div class="container">
       <div class="row mb-5">
-        <div class="col-md-12">
-          <h2>Latest Blogs</h2>
+        <div class="col-md-12 text-center mb-5">
+          <h2>News & Stories</h2>
+          <p class="lead">Stay connected with our journey. Read updates from our field programs, volunteer highlights, and real stories of transformation.</p>
+          <p><a href="{{ url('/blog') }}" class="link-underline">View All Posts</a></p>
         </div>
       </div>
 
       <div class="row">
+        @foreach($blogs as $blog)
         <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0">
           <div class="post-entry">
-            <a href="#" class="mb-3 img-wrap">
-              <img src="{{ asset('images/img_4.jpg') }}" alt="Image placeholder" class="img-fluid">
+            <a href="{{ url('/blog/' . $blog->slug) }}" class="mb-3 img-wrap">
+              <img src="{{ asset('storage/' . $blog->image_path) }}" alt="Image placeholder" class="img-fluid">
             </a>
-            <h3><a href="#">Be A Volunteer Today</a></h3>
-            <span class="date mb-4 d-block text-muted">July 26, 2018</span>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
-            <p><a href="#" class="link-underline">Read More</a></p>
+            <h3><a href="{{ url('/blog/' . $blog->slug) }}">{{ $blog->title }}</a></h3>
+            <span class="date mb-4 d-block text-muted">{{ $blog->created_at->format('M d, Y') }}</span>
+            <p>{{ Str::words(strip_tags($blog->body), 15, '...') }}</p>
+            <p><a href="{{ url('/blog/' . $blog->slug) }}" class="link-underline">Read More</a></p>
           </div>
         </div>
-        <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0">
-          <div class="post-entry">
-            <a href="#" class="mb-3 img-wrap">
-              <img src="{{ asset('images/img_5.jpg') }}" alt="Image placeholder" class="img-fluid">
-            </a>
-            <h3><a href="#">You May Save The Life of A Child</a></h3>
-            <span class="date mb-4 d-block text-muted">July 26, 2018</span>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
-            <p><a href="#" class="link-underline">Read More</a></p>
-          </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0">
-          <div class="post-entry">
-            <a href="#" class="mb-3 img-wrap">
-              <img src="{{ asset('images/img_6.jpg') }}" alt="Image placeholder" class="img-fluid">
-            </a>
-            <h3><a href="#">Children That Needs Care</a></h3>
-            <span class="date mb-4 d-block text-muted">July 26, 2018</span>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
-            <p><a href="#" class="link-underline">Read More</a></p>
-          </div>
-        </div>
+        @endforeach
       </div>
     </div>
   </div> <!-- .section -->
 
-  <div class="featured-section overlay-color-2" style="background-image: url('images/bg_2.jpg');">
+  <div class="featured-section overlay-color-2" style="background-image: url('{{ asset('images/volunteer.jpeg') }}');">
     
     <div class="container">
       <div class="row">
 
         <div class="col-md-6 mb-5 mb-md-0">
-          <img src="{{ asset('images/bg_2.jpg') }}" alt="Image placeholder" class="img-fluid">
+          <img src="{{ asset('images/volunteer.jpeg') }}" alt="Image placeholder" class="img-fluid">
         </div>
 
         <div class="col-md-6 pl-md-5">
 
           <div class="form-volunteer">
+            <h2>Become a Volunteer</h2>
+            <p class="mb-4">Join our grassroots team and use your skills to make a tangible difference in Nairobi.</p>
             
-            <h2>Be A Volunteer Today</h2>
-            <form action="#" method="post">
+            <form action="{{ url('/volunteer/submit') }}" method="POST">
+              <!-- Essential for Laravel form security to prevent 419 errors -->
+              @csrf 
+              
               <div class="form-group">
-                <!-- <label for="name">Name</label> -->
-                <input type="text" class="form-control py-2" id="name" placeholder="Enter your name">
+                <!-- Added 'name' attribute and 'required' validation -->
+                <input type="text" name="name" id="name" class="form-control py-2" placeholder="Your Full Name" required>
               </div>
+              
               <div class="form-group">
-                <!-- <label for="email">Email</label> -->
-                <input type="text" class="form-control py-2" id="email" placeholder="Enter your email">
+                <!-- Changed type to "email" for mobile keyboards and browser validation -->
+                <input type="email" name="email" id="email" class="form-control py-2" placeholder="Your Email Address" required>
               </div>
+              
               <div class="form-group">
-                <!-- <label for="v_message">Email</label> -->
-                <textarea name="v_message" id="" cols="30" rows="3" class="form-control py-2" placeholder="Write your message"></textarea>
-                <!-- <input type="text" class="form-control py-2" id="email"> -->
+                <!-- Added missing ID and improved placeholder text -->
+                <textarea name="v_message" id="v_message" cols="30" rows="3" class="form-control py-2" placeholder="Tell us a bit about yourself and how you'd like to help..." required></textarea>
               </div>
-              <div class="form-group">
-                <input type="submit" class="btn btn-white px-5 py-2" value="Send">
+              
+              <div class="form-group mb-0">
+                <button type="submit" class="btn btn-white px-5 py-2">Join the Team</button>
               </div>
             </form>
           </div>

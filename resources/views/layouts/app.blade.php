@@ -29,7 +29,7 @@
     
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-      <a class="navbar-brand" href="index.html"><img src="{{ asset('images/logo.png') }}" alt="Streams of Hope Logo" class="img-fluid" width="80"></a>
+      <a class="navbar-brand" href="{{ url('/') }}"><img src="{{ asset('images/logo.jfif') }}" alt="Streams of Hope Logo" class="img-fluid" width="80"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="oi oi-menu"></span> Menu
       </button>
@@ -55,62 +55,34 @@
     <div class="container">
       <div class="row mb-5">
         <div class="col-md-6 col-lg-4">
-          <h3 class="heading-section">About Us</h3>
-          <p class="lead">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-          <p class="mb-5">Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-          <p><a href="#" class="link-underline">Read  More</a></p>
+          <h3 class="heading-section">About Streams of Hope</h3>
+          <p class="lead">We are a grassroots organization based in Nairobi, Kenya, dedicated to restoring dignity and unlocking potential in vulnerable communities.</p>
+          <p class="mb-5">Through education, holistic health initiatives, and women's empowerment, we build sustainable pathways out of poverty.</p>
+          <p><a href="{{ url('/about') }}" class="link-underline">Read More</a></p>
         </div>
         <div class="col-md-6 col-lg-4">
           <h3 class="heading-section">Recent Causes</h3>
-          <div class="block-21 d-flex mb-4">
-            <figure class="mr-3">
-              <img src="images/img_1.jpg" alt="" class="img-fluid">
-            </figure>
-            <div class="text">
-              <h3 class="heading"><a href="#">Water Is Life. Clean Water In Urban Area</a></h3>
-              <div class="meta">
-                <div><a href="#"><span class="icon-calendar"></span> July 29, 2018</a></div>
-                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+          @foreach($footerCauses as $cause)
+            <div class="block-21 d-flex mb-4">
+              <figure class="mr-3">
+                <img src="{{ asset('storage/' . $cause->image_path) }}" alt="{{ $cause->title }}" class="img-fluid">
+              </figure>
+              <div class="text">
+                <h3 class="heading"><a href="{{ url('/causes/' . $cause->slug) }}">{{ $cause->title }}</a></h3>
+                <div class="meta">
+                  <div><a href="#"><span class="icon-calendar"></span> {{ $cause->created_at->format('F d, Y') }}</a></div>
+                </div>
               </div>
             </div>
-          </div>
-
-          <div class="block-21 d-flex mb-4">
-            <figure class="mr-3">
-              <img src="{{ asset('images/img_2.jpg') }}" alt="" class="img-fluid">
-            </figure>
-            <div class="text">
-              <h3 class="heading"><a href="#">Life Is Short So Be Kind</a></h3>
-              <div class="meta">
-                <div><a href="#"><span class="icon-calendar"></span> July 29, 2018</a></div>
-                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="block-21 d-flex mb-4">
-            <figure class="mr-3">
-              <img src="{{ asset('images/img_4.jpg') }}" alt="" class="img-fluid">
-            </figure>
-            <div class="text">
-              <h3 class="heading"><a href="#">Unfortunate Children Need Your Love</a></h3>
-              <div class="meta">
-                <div><a href="#"><span class="icon-calendar"></span> July 29, 2018</a></div>
-                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-              </div>
-            </div>
-          </div>
+          @endforeach
         </div>
         <div class="col-md-6 col-lg-4">
           <div class="block-23">
             <h3 class="heading-section">Get Connected</h3>
               <ul>
-                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+                <li><span class="icon icon-map-marker"></span><span class="text">Nairobi, Kenya</span></li>
+                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+254 xxx xxx xxx</span></a></li>
+                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@streamsofhopeinitiative.org</span></a></li>
               </ul>
             </div>
         </div>
@@ -121,8 +93,8 @@
         <div class="col-md-12 text-center">
           <p>
             Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made with <i class="ion-ios-heart text-danger" aria-hidden="true"></i> by <a href="https://thewetchicken.com" target="_blank" >TWC</a></br>
-            <a href="{{ route('admin.blogs.index') }}" class="text-muted" style="text-decoration: none;">Causes</a>,
-            <a href="{{ route('admin.causes.index') }}" class="text-muted" style="text-decoration: none;">Blogs</a>
+            <a href="{{ route('admin.blogs.index') }}" class="text-muted" style="text-decoration: none;">admin</a>
+            <a href="{{ route('admin.causes.index') }}" class="text-muted" style="text-decoration: none;">center</a>
           </p>
           </p>
         </div>
@@ -131,7 +103,7 @@
   </footer>
 
   <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#6dbfb8"/></svg></div>
 
 
     <script src="{{ asset('js/jquery.min.js') }}"></script>

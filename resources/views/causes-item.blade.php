@@ -4,7 +4,12 @@
   
   <div class="block-31" style="position: relative;">
     <div class="owl-carousel loop-block-31 ">
-      <div class="block-30 block-30-sm item" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+      @if($cause->image_path)
+        <div class="block-30 block-30-sm item" style="background-image: url('{{ asset('storage/' . $cause->image_path) }}');" data-stellar-background-ratio="0.5">
+      @else
+          <!-- Fallback image if they didn't upload one -->
+          <div class="block-30 block-30-sm item" style="background-image: url('{{ asset('images/default-blog.jfif') }}');" data-stellar-background-ratio="0.5">
+      @endif
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-12">
@@ -31,12 +36,12 @@
               </div> <!-- .col-md-8 -->
               <div class="col-md-4 sidebar">
                 <div class="sidebar-box">
-                  <div class="categories">
+                  {{-- <div class="categories">
                     <h3>Categories</h3>
                     <li><a href="#">Read next post</a></li>
                     <li><a href="#">Read previous post</a></li>
                     <li><a href="#">More blog posts</a></li>
-                  </div>
+                  </div> --}}
                 </div>
               </div>
             </div>

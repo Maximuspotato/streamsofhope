@@ -27,7 +27,7 @@
             </ul>
         </div>
     @endif
-    <form action="{{ route('admin.blogs.store') }}" method="POST">
+    <form action="{{ route('admin.blogs.store') }}" enctype="multipart/form-data" method="POST">
         @csrf
         
         <div class="form-group mb-3">
@@ -35,14 +35,19 @@
             <input type="text" name="title" class="form-control" value="{{ old('title') }}" required>
         </div>
 
-        <div class="form-group mb-3">
+        {{-- <div class="form-group mb-3">
             <label>Excerpt</label>
             <textarea name="excerpt" class="form-control">{{ old('excerpt') }}</textarea>
-        </div>
+        </div> --}}
 
         <div class="form-group mb-3">
             <label>Body Content</label>
             <textarea name="body" class="form-control" rows="8" required>{{ old('body') }}</textarea>
+        </div>
+
+        <div class="form-group mb-3">
+            <label>Blog Image</label>
+            <input type="file" name="image" class="form-control" accept="image/*">
         </div>
         
         <button type="submit" class="btn btn-success">Save Post</button>

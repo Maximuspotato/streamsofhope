@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Cause;
+use Illuminate\Support\Facades\Storage;
 
 class CauseController extends Controller
 {
@@ -39,10 +40,24 @@ class CauseController extends Controller
     {
         $request->validate([
             'title' => 'required|max:255',
-            'body' => 'required'
+            'body' => 'required',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg|max:10240',
         ]);
 
-        Cause::create($request->all());
+        // 2. Grab all the request data
+        $data = $request->all();
+
+        // 3. Check if an image was actually uploaded
+        if ($request->hasFile('image')) {
+            // This saves the file to storage/app/public/causes 
+            // and returns the path (e.g., "causes/filename.jpg")
+            $imagePath = $request->file('image')->store('causes', 'public');
+            
+            // Add the path to our $data array so it gets saved to the database
+            $data['image_path'] = $imagePath;
+        }
+
+        Cause::create($data);
 
         return redirect()->route('admin.causes.index')->with('success', 'Cause created successfully!');
     }
@@ -80,10 +95,30 @@ class CauseController extends Controller
     {
         $request->validate([
             'title' => 'required|max:255',
-            'body' => 'required'
+            'body' => 'required',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg|max:10240',
         ]);
 
-        $cause->update($request->all());
+        // 2. Grab all request data
+        $data = $request->all();
+
+        // 3. Check if a new image is being uploaded
+        if ($request->hasFile('image')) {
+            
+            // A. If the blog already has an old image, delete it from the server
+            if ($cause->image_path) {
+                Storage::disk('public')->delete($cause->image_path);
+            }
+            
+            // B. Store the new image and grab its path
+            $imagePath = $request->file('image')->store('causes', 'public');
+            
+            // C. Update the data array with the new path
+            $data['image_path'] = $imagePath;
+        }
+
+        // 4. Update the database record
+        $cause->update($data);
 
         return redirect()->route('admin.causes.index')->with('success', 'Cause updated successfully!');
     }
@@ -96,6 +131,11 @@ class CauseController extends Controller
      */
     public function destroy(Cause $cause)
     {
+        // Delete the image from the server if it exists
+        if ($cause->image_path) {
+            Storage::disk('public')->delete($cause->image_path);
+        }
+
         $cause->delete();
         return redirect()->route('admin.causes.index')->with('success', 'Cause deleted successfully!');
     }

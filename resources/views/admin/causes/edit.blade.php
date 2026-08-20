@@ -19,23 +19,36 @@
 <div class="container">
     <h2>Edit Cause</h2>
     
-    <form action="{{ route('admin.causes.update', $cause->id) }}" method="POST">
+    <form action="{{ route('admin.causes.update', $cause->id) }}" method="POST" enctype="multipart/form-data" >
         @csrf
         @method('PUT')
 
         <div class="form-group mb-3">
             <label>{{ $cause->title }}</label>
-            <input type="text" name="title" class="form-control" required>
+            <input type="text" name="title" class="form-control" value="{{ $cause->title }}">
         </div>
         
-        <div class="form-group mb-3">
+        {{-- <div class="form-group mb-3">
             <label>Excerpt</label>
             <textarea name="excerpt" class="form-control">{{ $cause->excerpt }}</textarea>
-        </div>
+        </div> --}}
 
         <div class="form-group mb-3">
             <label>Body Content</label>
             <textarea name="body" class="form-control" rows="8" required>{{ $cause->body }}</textarea>
+        </div>
+
+        <div class="form-group mb-3">
+            <label>Current Image</label><br>
+            @if($cause->image_path)
+                <img src="{{ asset('storage/' . $cause->image_path) }}" alt="Current Image" style="max-height: 150px; margin-bottom: 10px;">
+            @else
+                <p class="text-muted">No image uploaded.</p>
+            @endif
+            
+            <br>
+            <label>Upload New Image (leave blank to keep current image)</label>
+            <input type="file" name="image" class="form-control" accept="image/*">
         </div>
         
         <button type="submit" class="btn btn-success">Save Post</button>
