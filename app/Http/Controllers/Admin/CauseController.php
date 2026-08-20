@@ -44,7 +44,7 @@ class CauseController extends Controller
 
         Cause::create($request->all());
 
-        return redirect()->route('causes.index')->with('success', 'Cause created successfully!');
+        return redirect()->route('admin.causes.index')->with('success', 'Cause created successfully!');
     }
 
     /**
@@ -85,7 +85,7 @@ class CauseController extends Controller
 
         $cause->update($request->all());
 
-        return redirect()->route('causes.index')->with('success', 'Cause updated successfully!');
+        return redirect()->route('admin.causes.index')->with('success', 'Cause updated successfully!');
     }
 
     /**
@@ -97,6 +97,6 @@ class CauseController extends Controller
     public function destroy(Cause $cause)
     {
         $cause->delete();
-        return redirect()->route('causes.index')->with('success', 'Cause deleted successfully!');
+        return redirect()->route('admin.causes.index')->with('success', 'Cause deleted successfully!');
     }
 }
