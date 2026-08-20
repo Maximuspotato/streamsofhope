@@ -120,7 +120,10 @@
       <div class="row pt-5">
         <div class="col-md-12 text-center">
           <p>
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made with <i class="ion-ios-heart text-danger" aria-hidden="true"></i> by <a href="https://thewetchicken.com" target="_blank" >TWC</a>
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made with <i class="ion-ios-heart text-danger" aria-hidden="true"></i> by <a href="https://thewetchicken.com" target="_blank" >TWC</a></br>
+            <a href="{{ route('admin.blogs.index') }}" class="text-muted" style="text-decoration: none;">Causes</a>,
+            <a href="{{ route('admin.causes.index') }}" class="text-muted" style="text-decoration: none;">Blogs</a>
+          </p>
           </p>
         </div>
       </div>

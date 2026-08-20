@@ -62,15 +62,9 @@ Route::get('/causes', [CauseController::class, 'index']);
 // Route for the single causes page (the {slug} is dynamic)
 Route::get('/causes/{slug}', [CauseController::class, 'show']);
 
-// Group all admin routes together
-Route::prefix('admin')->name('admin.')->group(function () {
+Route::prefix('admin')->name('admin.')->middleware('auth.basic')->group(function () {
     
-    // Generates URLs like /admin/blogs
-    // Names routes like admin.blogs.index
     Route::resource('blogs', AdminBlogController::class);
-    
-    // Generates URLs like /admin/causes
-    // Names routes like admin.causes.index
     Route::resource('causes', AdminCauseController::class);
     
 });
