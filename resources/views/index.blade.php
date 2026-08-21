@@ -189,30 +189,34 @@
           <div class="form-volunteer">
             <h2>Become a Volunteer</h2>
             <p class="mb-4">Join our grassroots team and use your skills to make a tangible difference in Nairobi.</p>
-            
-            <form action="{{ url('/volunteer/submit') }}" method="POST">
-              <!-- Essential for Laravel form security to prevent 419 errors -->
+            @if(session('success'))
+              <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  {{ session('success') }}
+              </div>
+          @endif
+            <form action="{{ route('inquiry.submit') }}" method="POST">
               @csrf 
               
+              <!-- This hidden field tells the database it's a volunteer -->
+              <input type="hidden" name="type" value="volunteer">
+              
               <div class="form-group">
-                <!-- Added 'name' attribute and 'required' validation -->
-                <input type="text" name="name" id="name" class="form-control py-2" placeholder="Your Full Name" required>
+                  <input type="text" name="name" class="form-control py-2" placeholder="Your Full Name" required>
               </div>
               
               <div class="form-group">
-                <!-- Changed type to "email" for mobile keyboards and browser validation -->
-                <input type="email" name="email" id="email" class="form-control py-2" placeholder="Your Email Address" required>
+                  <input type="email" name="email" class="form-control py-2" placeholder="Your Email Address" required>
               </div>
               
               <div class="form-group">
-                <!-- Added missing ID and improved placeholder text -->
-                <textarea name="v_message" id="v_message" cols="30" rows="3" class="form-control py-2" placeholder="Tell us a bit about yourself and how you'd like to help..." required></textarea>
+                  <!-- Changed name="v_message" to name="message" -->
+                  <textarea name="message" cols="30" rows="3" class="form-control py-2" placeholder="Tell us how you'd like to help..." required></textarea>
               </div>
               
               <div class="form-group mb-0">
-                <button type="submit" class="btn btn-white px-5 py-2">Join the Team</button>
+                  <button type="submit" class="btn btn-white px-5 py-2">Join the Team</button>
               </div>
-            </form>
+          </form>
           </div>
         </div>
         

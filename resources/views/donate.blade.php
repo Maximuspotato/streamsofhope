@@ -36,32 +36,42 @@
       <div class="row">
 
         <div class="col-md-6 mb-5 mb-md-0">
-          <img src="images/bg_2.jpg" alt="Image placeholder" class="img-fluid">
+          <img src="{{ asset('images/volunteer.jpeg') }}" alt="Image placeholder" class="img-fluid">
         </div>
 
         <div class="col-md-6 pl-md-5">
 
           <div class="form-volunteer">
-            
-            <h2>Be A Volunteer Today</h2>
-            <form action="#" method="post">
-              <div class="form-group">
-                <!-- <label for="name">Name</label> -->
-                <input type="text" class="form-control py-2" id="name" placeholder="Enter your name">
+            <h2>Become a Volunteer</h2>
+            <p class="mb-4">Join our grassroots team and use your skills to make a tangible difference in Nairobi.</p>
+            @if(session('success'))
+              <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  {{ session('success') }}
               </div>
+          @endif
+            <form action="{{ route('inquiry.submit') }}" method="POST">
+              @csrf 
+              
+              <!-- This hidden field tells the database it's a volunteer -->
+              <input type="hidden" name="type" value="volunteer">
+              
               <div class="form-group">
-                <!-- <label for="email">Email</label> -->
-                <input type="text" class="form-control py-2" id="email" placeholder="Enter your email">
+                  <input type="text" name="name" class="form-control py-2" placeholder="Your Full Name" required>
               </div>
+              
               <div class="form-group">
-                <!-- <label for="v_message">Email</label> -->
-                <textarea name="v_message" id="" cols="30" rows="3" class="form-control py-2" placeholder="Write your message"></textarea>
-                <!-- <input type="text" class="form-control py-2" id="email"> -->
+                  <input type="email" name="email" class="form-control py-2" placeholder="Your Email Address" required>
               </div>
+              
               <div class="form-group">
-                <input type="submit" class="btn btn-white px-5 py-2" value="Send">
+                  <!-- Changed name="v_message" to name="message" -->
+                  <textarea name="message" cols="30" rows="3" class="form-control py-2" placeholder="Tell us how you'd like to help..." required></textarea>
               </div>
-            </form>
+              
+              <div class="form-group mb-0">
+                  <button type="submit" class="btn btn-white px-5 py-2">Join the Team</button>
+              </div>
+          </form>
           </div>
         </div>
         

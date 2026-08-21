@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CauseController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\InquiryController;
 
 use App\Http\Controllers\Admin\BlogController as AdminBlogController;
 use App\Http\Controllers\Admin\CauseController as AdminCauseController;
@@ -33,9 +34,7 @@ Route::get('/causes-item', function () {
     return view('causes-item'); 
 });
 
-Route::get('/gallery', function () {
-    return view('gallery'); 
-});
+Route::get('/gallery', [HomeController::class, 'getImages']);
 
 Route::get('/blog-item', function () {
     return view('blog-item'); 
@@ -67,3 +66,6 @@ Route::prefix('admin')->name('admin.')->middleware('auth.basic')->group(function
     Route::resource('causes', AdminCauseController::class);
     
 });
+
+// Form submission route
+Route::post('/inquiry/submit', [InquiryController::class, 'store'])->name('inquiry.submit');

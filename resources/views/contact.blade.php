@@ -22,35 +22,37 @@
     <div class="container">
       <div class="row block-9">
         <div class="col-md-6 pr-md-5">
-          <form action="{{ url('/contact/submit') }}" method="POST">
-  <!-- The CSRF token is required by Laravel to prevent cross-site request forgery -->
-  @csrf
-  
-  <div class="form-group">
-    <!-- Added name="name" and required -->
-    <input type="text" name="name" id="name" class="form-control px-3 py-3" placeholder="Your Full Name" required>
-  </div>
-  
-  <div class="form-group">
-    <!-- Changed type="email", added name="email" and required -->
-    <input type="email" name="email" id="email" class="form-control px-3 py-3" placeholder="Your Email Address" required>
-  </div>
-  
-  <div class="form-group">
-    <!-- Added name="subject" and required -->
-    <input type="text" name="subject" id="subject" class="form-control px-3 py-3" placeholder="Subject" required>
-  </div>
-  
-  <div class="form-group">
-    <!-- Added name="message" and a more inviting placeholder -->
-    <textarea name="message" id="message" cols="30" rows="7" class="form-control px-3 py-3" placeholder="How can we partner or help you today?" required></textarea>
-  </div>
-  
-  <div class="form-group mb-0">
-    <!-- Changed to a <button> tag for better modern browser support -->
-    <button type="submit" class="btn btn-primary py-3 px-5">Send Message</button>
-  </div>
-</form>
+          @if(session('success'))
+              <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  {{ session('success') }}
+              </div>
+          @endif
+          <form action="{{ route('inquiry.submit') }}" method="POST">
+            <!-- The CSRF token is required by Laravel to prevent cross-site request forgery -->
+            @csrf
+
+            <input type="hidden" name="type" value="contact">
+            
+            <div class="form-group">
+              <!-- Added name="name" and required -->
+              <input type="text" name="name" id="name" class="form-control px-3 py-3" placeholder="Your Full Name" required>
+            </div>
+            
+            <div class="form-group">
+              <!-- Changed type="email", added name="email" and required -->
+              <input type="email" name="email" id="email" class="form-control px-3 py-3" placeholder="Your Email Address" required>
+            </div>
+            
+            <div class="form-group">
+              <!-- Added name="message" and a more inviting placeholder -->
+              <textarea name="message" id="message" cols="30" rows="7" class="form-control px-3 py-3" placeholder="How can we partner or help you today?" required></textarea>
+            </div>
+            
+            <div class="form-group mb-0">
+              <!-- Changed to a <button> tag for better modern browser support -->
+              <button type="submit" class="btn btn-primary py-3 px-5">Send Message</button>
+            </div>
+          </form>
         
         </div>
 
